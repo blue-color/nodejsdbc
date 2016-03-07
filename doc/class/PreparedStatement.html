@@ -41,6 +41,18 @@
       <ul class='summary'>
   <li>
     <span class='signature'>
+      <a href='#addBatch-dynamic'>
+        #
+(void)
+<b>addBatch</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Adds current parameters to this PreparedStatement&#39;s batch 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#setString-dynamic'>
         #
 (void)
@@ -65,6 +77,18 @@
   </li>
   <li>
     <span class='signature'>
+      <a href='#executeBatch-dynamic'>
+        #
+(int array)
+<b>executeBatch</b><span>()</span>
+      </a>
+    </span>
+    <span class='desc'>
+      Executes all the statements that were added to the batch. 
+    </span>
+  </li>
+  <li>
+    <span class='signature'>
       <a href='#executeUpdate-dynamic'>
         #
 (int)
@@ -72,7 +96,7 @@
       </a>
     </span>
     <span class='desc'>
-      <p>executes DDL(Data Definition Language) or DML(Data Manipulation Language) statements if DDL statement is executed returns nothing else returns the number of 
+      <p>executes DDL(Data Definition Language) or DML(Data Manipulation Language) statements if DDL statement is executed returns nothing else returns the number of
 manipulated(inserted,updated,deleted) records</p>
     </span>
   </li>
@@ -142,6 +166,19 @@ manipulated(inserted,updated,deleted) records</p>
 </div>
       <h2>Instance Method Details</h2>
       <div class='methods'>
+  <div class='method_details'>
+    <p class='signature' id='addBatch-dynamic'>
+      #
+(void)
+<b>addBatch</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Adds current parameters to this PreparedStatement&#39;s batch</p>
+</div>
+<div class='tags'>
+</div>
+  </div>
   <div class='method_details'>
     <p class='signature' id='setString-dynamic'>
       #
@@ -215,6 +252,30 @@ manipulated(inserted,updated,deleted) records</p>
 </div>
   </div>
   <div class='method_details'>
+    <p class='signature' id='executeBatch-dynamic'>
+      #
+(int array)
+<b>executeBatch</b><span>()</span>
+      <br>
+    </p>
+    <div class='docstring'>
+  <p>Executes all the statements that were added to the batch.</p>
+</div>
+<div class='tags'>
+  <h3>Returns:</h3>
+  <ul class='return'>
+    <li>
+      <span class='type'></span>
+      (
+        <tt>int array</tt>
+      )
+      &mdash;
+      <span class='desc'>a promise that returns an array where each element is # of rows updated for each statement </span>
+    </li>
+  </ul>
+</div>
+  </div>
+  <div class='method_details'>
     <p class='signature' id='executeUpdate-dynamic'>
       #
 (int)
@@ -223,7 +284,7 @@ manipulated(inserted,updated,deleted) records</p>
     </p>
     <div class='docstring'>
   <p>executes DDL(Data Definition Language) or DML(Data Manipulation Language) statements
-if DDL statement is executed returns nothing else returns the number of 
+if DDL statement is executed returns nothing else returns the number of
 manipulated(inserted,updated,deleted) records</p>
 </div>
 <div class='tags'>
@@ -237,7 +298,7 @@ manipulated(inserted,updated,deleted) records</p>
         )
       </span>
       &mdash;
-      <span class='desc'>SQL statement to be executed @example &#39;SELECT COLUMN_A from MY_TABLE&#39;  @example &#39;DROP TABLE MY_TABLE&#39;   </span>
+      <span class='desc'>SQL statement to be executed @example &#39;SELECT COLUMN_A from MY_TABLE&#39; @example &#39;DROP TABLE MY_TABLE&#39; </span>
     </li>
   </ul>
   <h3>Returns:</h3>
@@ -248,7 +309,7 @@ manipulated(inserted,updated,deleted) records</p>
         <tt>int</tt>
       )
       &mdash;
-      <span class='desc'>a promise that returns the result of the executed statement </span>
+      <span class='desc'>a promise that returns the result of the executed statement (number of rows updated) </span>
     </li>
   </ul>
 </div>
@@ -268,7 +329,11 @@ manipulated(inserted,updated,deleted) records</p>
   <ul class='return'>
     <li>
       <span class='type'></span>
-      <tt>int</tt>
+      (
+        <tt>int</tt>
+      )
+      &mdash;
+      <span class='desc'>result of the executed statement (number of rows updated) </span>
     </li>
   </ul>
 </div>
@@ -292,7 +357,7 @@ manipulated(inserted,updated,deleted) records</p>
         <tt><a href='../class/ResultSet.html'>ResultSet</a></tt>
       )
       &mdash;
-      <span class='desc'>a promise that returns ResultSet        </span>
+      <span class='desc'>a promise that returns ResultSet </span>
     </li>
   </ul>
 </div>
@@ -313,11 +378,11 @@ manipulated(inserted,updated,deleted) records</p>
 </div>
     </div>
     <div id='footer'>
-  November 04, 15 14:59:22 by
+  By
   <a href='https://github.com/coffeedoc/codo' title='CoffeeScript API documentation generator'>
     Codo
   </a>
-  2.0.11
+  2.1.0
   &#10034;
   Press H to see the keyboard shortcuts
   &#10034;
