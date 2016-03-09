@@ -34,7 +34,8 @@ class ResultSet
 
     # Gets the given column's value as a string representation of a JDBC timestamp
     getTimestamp: (column) ->
-        @resultSet.getTimestampSync(column).toString()
+        timestamp = @resultSet.getTimestampSync(column)
+        if timestamp then timestamp.toString() else null
 
 
     # Retrieves the number, types and properties of this ResultSet object's columns
