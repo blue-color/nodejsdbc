@@ -80,4 +80,4 @@ class Statement
 
     # Adds query timeout
     setQueryTimeout: (seconds) ->
-	@statement.setQueryTimeout(seconds)
+       @statement.setQueryTimeoutAsync(seconds)
