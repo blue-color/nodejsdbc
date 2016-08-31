@@ -77,3 +77,7 @@ class Statement
     # Closes the statement and frees the resources immediately.
     close: ->
         @statement.closeAsync()
+
+    # Adds query timeout
+    setQueryTimeout: (seconds) ->
+       @statement.setQueryTimeoutAsync(seconds)
